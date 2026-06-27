@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee" version="5.0">
+    
+    <servlet>
+        <servlet-name>WeatherService</servlet-name>
+        <jsp-file>/weather.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WeatherService</servlet-name>
+        <url-pattern>/info/request.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MenuService</servlet-name>
+        <jsp-file>/menu.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MenuService</servlet-name>
+        <url-pattern>/info/menu.jsp</url-pattern>
+    </servlet-mapping>
+    <servlet>
+    <servlet-name>ImageService</servlet-name>
+    <jsp-file>/image_proxy.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ImageService</servlet-name>
+        <!-- Falls deine Basisstation einen relativen Kontext erzwingt -->
+        <url-pattern>/info/image.do</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>ImageService</servlet-name>
+        <!-- Fängt den originalen, harten Screensaver-Aufruf ab -->
+        <url-pattern>/proxy/image.do</url-pattern>
+    </servlet-mapping>
+        <!-- Mapping für statisch wirkende BMP-Aufrufe -->
+    <servlet-mapping>
+        <servlet-name>ImageService</servlet-name>
+        <url-pattern>/info/sun.bmp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImageService</servlet-name>
+        <url-pattern>/info/cloud.bmp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImageService</servlet-name>
+        <url-pattern>/info/rain.bmp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImageService</servlet-name>
+        <url-pattern>/info/snow.bmp</url-pattern>
+    </servlet-mapping>
+
+<servlet>
+    <servlet-name>AdminPage</servlet-name>
+    <jsp-file>/admin.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+    <servlet-name>AdminPage</servlet-name>
+    <url-pattern>/admin</url-pattern>
+</servlet-mapping>
+<mime-mapping>
+    <extension>jsp</extension>
+    <mime-type>application/xhtml+xml</mime-type>
+</mime-mapping>
+</web-app>
