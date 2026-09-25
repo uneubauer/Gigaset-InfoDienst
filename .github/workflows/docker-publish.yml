@@ -32,7 +32,7 @@ jobs:
         uses: docker/login-action@v3
         with:
           username: uneubauer
-          password: dckr_pat_74SXOpRCB_q08vXfUqqlxngBpwU
+          password: 
 
       # Metadaten (Tags, Labels) automatisch generieren
       - name: Extract metadata (tags, labels) for Docker
