@@ -4,6 +4,7 @@ on:
   push:
     branches: [ "main" ] # Oder dein Standard-Branch (z.B. master)
     tags: [ "v*.*.*" ]     # Optional: Falls du mit Releases/Tags arbeitest
+    workflow_dispatch:
   release:
     types: [ published ]
 
